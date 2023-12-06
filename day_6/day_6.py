@@ -26,7 +26,13 @@ def main():
         possibility_num = calculatePossibilities(time[i], distance[i])
         possibilities *= possibility_num
 
-    print(possibilities)
+    # part 2
+
+    time_2 = ''.join(time)
+    distance_2 = ''.join(distance)
+    
+    possibilities_2 = calculatePossibilities(time_2, distance_2)
+    print(possibilities_2)
     
 
 
