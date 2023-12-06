@@ -7,13 +7,31 @@ def loadData():
         d = f.read().splitlines()
     return d
 
-def part_1(data):
-    sum = 0
+conversion = {
+    'zero': '0',
+    'one': '1',
+    'two': '2',
+    'three': '3',
+    'four': '4',
+    'five': '5',
+    'six': '6',
+    'seven': '7',
+    'eight': '8',
+    'nine': '9'
+}
 
-    for line in data:
-        digits = [char for char in line if char.isdigit()]
-        first, last = digits[0], digits[-1]
-        sum += int(first+last)
+def find_first_and_last_digit(data):
+    sum = 0
+    for row in data:
+        digits = []
+        for i,char in enumerate(row):
+            if char.isdigit():
+                digits.append(char)
+            for key, value in conversion.items():
+                if row[i:].startswith(key):
+                    digits.append(value)
+        sum += int(digits[0] + digits[-1])
+                
 
     
     return sum
@@ -22,9 +40,8 @@ def part_1(data):
 
 def main():
     data = loadData()
-    # data = ['1abc2','pqr3stu8vwx',
-# 'a1b2c3d4e58f','treb7uchet']
-    sum = part_1(data)
+    test_data = ['eightwo']
+    sum = find_first_and_last_digit(data=test_data)
     print(sum)
 
 

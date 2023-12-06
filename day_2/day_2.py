@@ -24,10 +24,11 @@ def validateGame(game):
     for subgame in subgames:
         if not validateSubgame(subgame):
             return False
+        # Todo part 2
         
     return True
 
-    
+
 
 def part_1(data):
     sum = 0
@@ -35,8 +36,6 @@ def part_1(data):
         index += 1
         if validateGame(line.split(":")[1]):
             sum += index
-
-
     return sum
 
 def main():
