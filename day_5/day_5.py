@@ -33,25 +33,9 @@ def main():
         mapped_light = mapSeed(mapped_water,light_to_temperature)
         mapped_temperature = mapSeed(mapped_light,temperature_to_humidity)
         mapped_humidity = mapSeed(mapped_temperature,humidity_to_location)
-        locations.append(mapped_humidity)
-    # return smallest item from the list locations
+        locations.append(mapped_humidity
+                             )
     print(f"Final Locations: {min(locations)}")
-    # seed = seeds[3]
-    # mapped_seed = mapSeed(seed,seed_to_soil)
-    # print(f"Seed: {seed} -> Soil: {mapped_seed}")
-    # mapped_soil = mapSeed(mapped_seed,soil_to_fertilizer)
-    # print(f"Soil: {mapped_seed} -> Fertilizer: {mapped_soil}")
-    # mapped_fertilizer = mapSeed(mapped_soil,fertilazer_to_water)
-    # print(f"Fertilizer: {mapped_soil} -> Water: {mapped_fertilizer}")
-    # mapped_water = mapSeed(mapped_fertilizer,water_to_light)
-    # print(f"Water: {mapped_fertilizer} -> Light: {mapped_water}")
-    # mapped_light = mapSeed(mapped_water,light_to_temperature)
-    # print(f"Light: {mapped_water} -> Temperature: {mapped_light}")
-    # mapped_temperature = mapSeed(mapped_light,temperature_to_humidity)
-    # print(f"Temperature: {mapped_light} -> Humidity: {mapped_temperature}")
-    # mapped_humidity = mapSeed(mapped_temperature,humidity_to_location)
-    # print(f"Humidity: {mapped_temperature} -> Location: {mapped_humidity}")
-    # print(f"Final Location: {mapped_humidity}")
     
 
 
