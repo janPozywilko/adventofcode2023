@@ -5,12 +5,8 @@ def loadData(file):
         d = f.read()
     return d
 
-def countSteps(instructions, mapping_dict):
+def countSteps(step, instructions, mapping_dict):
     steps = 0
-    # get first key from mapping_dict
-    step = 'AAA'
-    # print(step)
-    # print(instructions)
     instructions_length = len(instructions)
     while step != 'ZZZ':
         instruction = instructions[steps % instructions_length]
@@ -30,7 +26,7 @@ def main():
         destination = destination.replace(')', '')
         mapping_dict[source] = (destination.split(",")[0],destination.split(",")[1].split()[0]) 
     # print(instructions)
-    steps = countSteps(instructions, mapping_dict)
+    steps = countSteps('AAA',instructions, mapping_dict)
     print(steps)
 
 
